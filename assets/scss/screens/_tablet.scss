@@ -1,0 +1,24 @@
+// <======= SCREEN FOR TABLET =======>  
+@media (max-width: $max-width-tablet) {
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        &__nav {
+            width: 100%;  
+            a::after,a:hover::after {
+                bottom: 0;
+            }
+            a::before{
+                content: "";
+                position: absolute;
+                background-color: #f2f2f2;
+                width: 100%;
+                height: 4px;
+                bottom: 0;
+                left: 0;
+                opacity: 1;
+                transition: all .5s;
+            }
+        }
+    }
+}

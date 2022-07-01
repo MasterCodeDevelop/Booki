@@ -4,3 +4,10 @@
 
 /*#################### BASE ##################*/
 @import './base/reset';
+
+/*#################### LAYOUTS ##################*/
+@import './layouts/header';
+
+/*#################### LAYOUTS ##################*/
+@import './screens/desktop';
+@import './screens/tablet';
