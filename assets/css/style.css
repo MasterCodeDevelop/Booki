@@ -17,8 +17,220 @@ a {
   text-decoration: none;
 }
 
+/*#################### COMPONENTS ##################*/
+/* <======= SEARCH =======>  */
+.search {
+  position: relative;
+  width: 450px;
+  height: 55px;
+  border-radius: 10px;
+}
+.search__icon, .search__btn {
+  position: absolute;
+  text-align: center;
+  line-height: 3.5rem;
+}
+.search__icon {
+  left: 0;
+  width: 55px;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  background-color: #f2f2f2;
+}
+.search__input {
+  width: 100%;
+  height: 100%;
+  padding-left: 70px;
+  padding-right: 160px;
+  border: 2px solid #f2f2f2;
+  border-radius: inherit;
+  font: inherit;
+  font-weight: 700;
+  outline: none;
+}
+.search__input::placeholder {
+  color: inherit;
+}
+.search__btn {
+  right: 0;
+  cursor: pointer;
+  width: 150px;
+  height: 100%;
+  border-width: 0;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  background-color: #0065fc;
+  color: white;
+  font: inherit;
+  font-weight: 900;
+}
+.search__btn__icon {
+  display: none;
+}
+.search__btn__text {
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* <======= FILTER =======>  */
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.filter__title {
+  font-size: 1.1rem;
+}
+.filter__content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter-btn {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter-btn__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: #0065fc;
+  background-color: #e0edff;
+  border-radius: 50%;
+}
+.filter-btn__text {
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.filter-btn__checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.filter-btn__checkbox:checked + label {
+  color: #0065fc;
+}
+.filter-btn__checkbox:checked + label::after {
+  transform: translateX(0);
+}
+.filter-btn label {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 52px;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.filter-btn label::before, .filter-btn label::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.filter-btn label::before {
+  z-index: -2;
+  border: 2px solid #e0edff;
+}
+.filter-btn label::after {
+  z-index: -1;
+  background-color: #e0edff;
+  transform: translateX(-100%);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+.filter-btn label .filter-btn input:checked + label::after {
+  transform: translateX(0);
+}
+
+/*.filter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.filter-content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.filter-btn {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-btn input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+.filter-btn label {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 52px;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.filter-btn input:checked +  label {
+    color: var(--blue);
+}
+.filter-btn label::before, .filter-btn label::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.filter-btn label::before {
+    z-index: -2;
+    border: 2px solid #ebebeb;
+}
+.filter-btn label::after {
+    z-index: -1;
+    background-color: #e0edff;
+    transform: translateX(-100%);
+    transform-origin: left;
+    transition: transform .5s;
+}
+.filter-btn input:checked + label::after {
+    transform: translateX(0);
+}
+.filter-btn__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: var(--blue);
+    background-color: #deebff;
+    border-radius: 50%;
+}
+.filter-btn__text {
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    user-select: none
+}
+*/
 /*#################### LAYOUTS ##################*/
-/*==================== header ====================*/
+/* <======= HEADER =======>  */
 .header {
   display: flex;
   justify-content: space-between;
@@ -68,13 +280,51 @@ a {
   bottom: 100px;
 }
 
-/*#################### LAYOUTS ##################*/
+/*#################### PAGES ##################*/
+/* <======= HERO =======>  */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 5vw;
+  /* <== hero-info ==> */
+}
+.hero__title {
+  font-size: 1.2rem;
+}
+.hero__subtitle {
+  font-size: 1rem;
+}
+.hero-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.hero-info__icon {
+  width: 25px;
+  height: 25px;
+  color: #0065fc;
+  border: 1px solid #f2f2f2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-info__content {
+  font-size: 1rem;
+}
+
+/*#################### SCREENS ##################*/
+/* <======= SCREEN FOR DESKTOP =======>  */
 @media (min-width: 992px) {
   .header {
     padding-inline: 5vw;
   }
 }
+/* <======= SCREEN FOR TABLET =======>  */
 @media (max-width: 991px) {
+  /*=== HEADER === */
   .header {
     flex-direction: column;
     gap: 16px;
@@ -95,6 +345,31 @@ a {
     left: 0;
     opacity: 1;
     transition: all 0.5s;
+  }
+  /*=== FILTER === */
+  .filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* <======= SCREEN FOR MOBILE =======>  */
+@media (max-width: 767px) {
+  /*=== SEARCH === */
+  .search {
+    width: 100%;
+  }
+  .search__btn {
+    width: 3.5rem;
+    border-radius: inherit;
+  }
+  .search__btn__icon {
+    display: inline-block;
+  }
+  .search__btn__text {
+    display: none;
+  }
+  .search__input {
+    padding-right: 4rem;
   }
 }
 

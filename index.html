@@ -14,7 +14,7 @@
 <body>
     <!--==================== HEADER ====================-->
     <header class="header">
-        <a href="#logo" class="header__logo">
+        <a href="#" class="header__logo">
             <img 
                 src="public/img/logo/booki.png" 
                 alt="booki"
@@ -26,5 +26,73 @@
         </nav>
     </header>
 
+    
+    <!--====================[ main ]====================-->
+    <main>
+        
+        <!--==================== HERO ====================-->
+        <section class="section hero">
+            <!---- TITLE ---->
+            <div>
+                <h1 class="hero__title">Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p class="hero__subtitle">En plein centre ville ou en plein nature</p>
+            </div>
+
+            <!---- SEARCH ---->
+            <form class="search">
+                <label class="search__icon" for="search-input"><i class=" fas fa-map-marker-alt"></i></label>                
+                <input  class="search__input" id="search-input" type="search" placeholder="Marseille, France">
+                <button class="search__btn" type="submit">
+                    <span class="search__btn__icon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <span class="search__btn__text" >Rechercher</span>
+                </button> 
+            </form> 
+
+            <!---- FILTRE ---->
+            <div class="filter">
+                <h2>Filtres</h2>
+                <ul class="filter__content" >
+                    <li class="filter-btn" >
+                        <input class="filter-btn__checkbox" type="checkbox" id="eco" />
+                        <label for="eco">
+                            <span class="filter-btn__icon" ><i class="fas fa-money-bill-wave"></i></span>
+                            <span class="filter-btn__text">Economique</span>
+                        </label>
+                    </li>
+                    <li class="filter-btn" >
+                        <input class="filter-btn__checkbox" type="checkbox" id="family" />
+                        <label for="family">
+                            <span class="filter-btn__icon" ><i class="fas fa-child"></i></span>
+                            <span class="filter-btn__text">Familial</span>
+                        </label>
+                    </li>
+                    <li class="filter-btn" >
+                        <input class="filter-btn__checkbox" type="checkbox" id="romantic" />
+                        <label for="romantic">
+                            <span class="filter-btn__icon" ><i class="fas fa-heart"></i></span>
+                            <span class="filter-btn__text">Remantique</span>
+                        </label>
+                    </li>
+                    <li class="filter-btn" >
+                        <input class="filter-btn__checkbox" type="checkbox" id="animal" />
+                        <label for="animal">
+                            <span class="filter-btn__icon" ><i class="fas fa-dog"></i></span>
+                            <span class="filter-btn__text">Animal aurorisé</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <!---- INFO ---->
+            <div class="hero-info">
+                <span class="hero-info__icon"><i class=" fas fa-info"></i></span>
+                <p class="hero-info__content" >Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </section>
+            
+        </section>
+    </main>
 </body>
 </html>

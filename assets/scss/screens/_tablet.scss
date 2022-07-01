@@ -1,5 +1,7 @@
-// <======= SCREEN FOR TABLET =======>  
+/* <======= SCREEN FOR TABLET =======>  */
 @media (max-width: $max-width-tablet) {
+
+    /*=== HEADER === */
     .header {
         flex-direction: column;
         gap: 16px;
@@ -21,4 +23,11 @@
             }
         }
     }
+    
+    /*=== FILTER === */
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }

@@ -1,0 +1,21 @@
+/* <======= SCREEN FOR MOBILE =======>  */
+@media (max-width: $max-width-mobile) {
+
+    /*=== SEARCH === */
+    .search{
+        width: 100%;
+        &__btn {
+            width: 3.5rem;
+            border-radius: inherit;
+            &__icon {
+                display: inline-block;
+            }
+            &__text {
+                display: none;
+            }
+        }
+        &__input {
+            padding-right: 4rem;
+        }
+    }
+}
