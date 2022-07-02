@@ -6,6 +6,7 @@
 @import './base/reset';
 
 /*#################### COMPONENTS ##################*/
+@import './components/card';
 @import './components/search';
 @import './components/filter';
 
@@ -14,6 +15,7 @@
 
 /*#################### PAGES ##################*/
 @import './pages/hero';
+@import './pages/sections';
 
 /*#################### SCREENS ##################*/
 @import './screens/desktop';

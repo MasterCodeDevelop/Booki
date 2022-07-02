@@ -1,0 +1,68 @@
+/* <======= CARD =======>  */
+.card {
+    display: flex;
+    flex: 1;
+    border-radius: 20px;
+    background-color: white;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow:
+        5px 5px 5px rgba(0, 0, 0, 0.03),
+        0px -5px 5px rgba(0, 0, 0, 0.03),
+        -5px 0px 5px rgba(0, 0, 0, 0.03),
+        -5px -5px 5px rgba(0, 0, 0, 0.03);
+
+    &:hover {
+        box-shadow:
+            5px 5px 15px rgba(0, 0, 0, 0.1),
+            0px -5px 15px rgba(0, 0, 0, 0.1),
+            -5px 0px 15px rgba(0, 0, 0, 0.1),
+            -5px -5px 15px rgba(0, 0, 0, 0.1);
+    }
+    article{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        border: 4px solid white;
+        overflow: hidden;
+    }
+    &__thumbnail {
+        position: relative;
+        display: flex;
+        flex: 1;
+
+        &__img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+    &__title {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        margin-bottom: 8px;
+    }
+    &__description {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    &__rating {
+        display: flex;
+        gap: 0.25rem;
+        margin-top: auto;
+    }
+    .fa-star {
+        color: #d9d9d9;
+        &.cheked {
+            color: #0065fc;
+        }
+    }
+}

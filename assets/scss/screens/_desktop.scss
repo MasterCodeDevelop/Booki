@@ -3,4 +3,27 @@
     .header {
         padding-inline: $padding-inline;   
     }
+
+    /* <======= SPLIT =======>  */
+    .split-sections {
+        padding-inline: $padding-inline;
+    }
+    .split-sections .section {
+        background-color: $tertiary;
+        border-radius: 20px;
+        padding: 32px;
+    }
+
+    /* <======= CARD =======>  */
+    .card {
+        &.row-3 {
+            flex: 1 1 calc(33.3% - 1.5rem * 2);
+        }
+        article{
+            flex-direction: column;
+        }
+        &__thumbnail {
+            min-height: 145px;
+        }
+    }
 }
