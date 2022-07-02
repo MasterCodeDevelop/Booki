@@ -20,8 +20,6 @@ a {
 /*#################### COMPONENTS ##################*/
 /* <======= CARD =======>  */
 .card {
-  display: flex;
-  flex: 1;
   border-radius: 20px;
   background-color: white;
   transition: box-shadow 0.3s ease-in-out;
@@ -408,6 +406,18 @@ a {
 .popular {
   flex: 1;
 }
+.popular .section__title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.popular .section__content {
+  flex-direction: column;
+  flex: 1 1 0;
+}
+.popular .card-thumbnail {
+  flex: 0 0 40%;
+}
 
 /*#################### SCREENS ##################*/
 /* <======= SCREEN FOR DESKTOP =======>  */
@@ -428,7 +438,7 @@ a {
   .card.row-3 {
     flex: 1 1 calc(33.3% - 3rem);
   }
-  .card article {
+  .card.row-3 article {
     flex-direction: column;
   }
   .card__thumbnail {
@@ -468,7 +478,7 @@ a {
   .card.row-3 {
     flex: 1 1 calc(33.3% - 3rem);
   }
-  .card article {
+  .card.row-3 article {
     flex-direction: column;
   }
   .card__thumbnail {
@@ -480,6 +490,15 @@ a {
   }
   .split-sections .section {
     padding-inline: 5vw;
+  }
+  /*=== POPULAR === */
+  .popular {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f2f2f2;
+  }
+  .popular .card {
+    height: 145px;
   }
 }
 /* <======= SCREEN FOR MOBILE =======>  */

@@ -31,4 +31,16 @@
 /* <======= POPULAR =======>  */
 .popular {
     flex: 1;
+    .section__title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .section__content {
+        flex-direction: column;
+        flex: 1 1 0;
+    }
+    .card-thumbnail{
+        flex: 0 0 40%
+    } 
 }

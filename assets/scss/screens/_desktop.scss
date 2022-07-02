@@ -18,9 +18,9 @@
     .card {
         &.row-3 {
             flex: 1 1 calc(33.3% - 1.5rem * 2);
-        }
-        article{
-            flex-direction: column;
+            article{
+                flex-direction: column;
+            }
         }
         &__thumbnail {
             min-height: 145px;
