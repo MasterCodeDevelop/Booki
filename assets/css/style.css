@@ -337,6 +337,29 @@ a {
   bottom: 100px;
 }
 
+/*====================[ footer ]====================*/
+.footer {
+  height: auto;
+  padding: 30px 0;
+  background-color: #f2f2f2;
+  padding-inline: 5vw;
+}
+.footer__nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+}
+.footer__group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.footer__group__title {
+  margin-bottom: 10px;
+}
+
 /*#################### PAGES ##################*/
 /* <======= HERO =======>  */
 .hero {
@@ -419,6 +442,22 @@ a {
   flex: 0 0 40%;
 }
 
+/* <======= ACTIVITIES =======>  */
+#activities {
+  margin: 5vw 0;
+  gap: 25px;
+  flex: 1;
+  padding-inline: 5vw;
+}
+
+#activities {
+  border: none;
+}
+
+#activities .card article {
+  border: 0;
+}
+
 /*#################### SCREENS ##################*/
 /* <======= SCREEN FOR DESKTOP =======>  */
 @media (min-width: 992px) {
@@ -443,6 +482,41 @@ a {
   }
   .card__thumbnail {
     min-height: 145px;
+  }
+  /* <======= GRID CARD =======>  */
+  .grid-card {
+    width: calc(25% - 1.125rem);
+  }
+  .grid-card article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: 4px solid hsl(0deg, 0%, 100%);
+  }
+  .grid-card .card__content {
+    flex: 0;
+  }
+  .grid-card .card__thumbnail {
+    flex: 1;
+    height: 100%;
+  }
+  .grid-card.large {
+    flex: 0 0 100%;
+  }
+  .grid-card.medium {
+    flex: 1 1 calc(60% - 3rem);
+    min-height: auto;
+  }
+  .grid-card.small {
+    flex: 1 1 calc(40% - 3rem);
+    min-height: auto;
+  }
+  /* <======= ACTIVITIES =======>  */
+  .activities .section__content {
+    flex-direction: column;
+    height: 512px;
   }
 }
 /* <======= SCREEN FOR TABLET =======>  */
@@ -499,6 +573,10 @@ a {
   }
   .popular .card {
     height: 145px;
+  }
+  /*=== FOOTER === */
+  .footer__nav {
+    flex-direction: column;
   }
 }
 /* <======= SCREEN FOR MOBILE =======>  */

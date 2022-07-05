@@ -44,3 +44,17 @@
         flex: 0 0 40%
     } 
 }
+
+/* <======= ACTIVITIES =======>  */
+#activities {
+    margin: $padding-inline 0;
+    gap: 25px;
+    flex: 1;
+    padding-inline: $padding-inline;
+}
+#activities {
+    border: none;
+}
+#activities .card article{
+    border: 0;
+}
